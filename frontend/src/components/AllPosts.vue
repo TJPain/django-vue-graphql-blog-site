@@ -6,17 +6,45 @@
 </template>
 
 <script>
-import PostList from '@/components/PostList'
+import gql from "graphql-tag";
+import PostList from "@/components/PostList";
 
 export default {
-  name: 'AllPosts',
+  name: "AllPosts",
   components: {
     PostList,
   },
-  data () {
+  data() {
     return {
-        allPosts: null,
-    }
+      allPosts: null,
+    };
   },
-}
+  async created() {
+    const posts = await this.$apollo.query({
+      query: gql`
+        query {
+          allPosts {
+            title
+            subtitle
+            publishDate
+            published
+            metaDescription
+            slug
+            author {
+              user {
+                username
+                firstName
+                lastName
+              }
+            }
+            tags {
+              name
+            }
+          }
+        }
+      `,
+    });
+    this.allPosts = posts.data.allPosts;
+  },
+};
 </script>
