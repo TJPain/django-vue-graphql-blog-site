@@ -92,4 +92,18 @@ a.hover {
 .blog_title:visited {
   color: #3e414d;
 }
+
+@media only screen and (max-width: 1200px) {
+  .contents-container,
+  .blog-header__wrapper {
+    max-width: 95%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contents-container,
+  .blog-header__wrapper {
+    max-width: 90%;
+  }
+}
 </style>

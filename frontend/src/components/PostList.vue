@@ -162,4 +162,10 @@ export default {
   border-color: #3e414d;
   color: #3e414d;
 }
+
+@media only screen and (max-width: 800px) {
+  .post {
+    width: 100%;
+  }
+}
 </style>
