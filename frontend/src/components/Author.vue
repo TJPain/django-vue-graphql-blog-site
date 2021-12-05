@@ -1,18 +1,13 @@
 <template>
   <div v-if="author">
-    <h2>{{ displayName }}</h2>
-    <a :href="author.website" target="_blank" rel="noopener noreferrer"
-      >Website</a
-    >
-    <p>{{ author.bio }}</p>
-
-    <h3>Posts by {{ displayName }}</h3>
+    <h2 class="page-title">Posts by {{ displayName }}</h2>
+    <p class="page-subtitle">{{ author.bio }}</p>
     <PostList :posts="author.postSet" :showAuthor="false" />
   </div>
 </template>
 
 <script>
-import gql from 'graphql-tag'
+import gql from "graphql-tag";
 import PostList from "@/components/PostList";
 
 export default {
@@ -69,3 +64,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.page-title,
+.page-subtitle {
+  color: #3e414d;
+}
+</style>

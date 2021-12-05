@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Recent posts</h2>
+    <h2 class="page-title">Recent posts</h2>
     <PostList v-if="allPosts" :posts="allPosts" />
   </div>
 </template>
@@ -48,3 +48,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.page-title {
+  color: #3e414d;
+}
+</style>

@@ -44,10 +44,6 @@ html {
   padding: 0;
 }
 
-* + * {
-  margin-top: 24px;
-}
-
 .blog-header__container {
   position: fixed;
   display: flex;
@@ -74,13 +70,13 @@ html {
 .contents-container {
   max-width: 1170px;
   margin: auto;
-  padding-top: 83px;
+  padding-top: 110px;
 }
 
 a,
 a:link,
 a:visited {
-  color: #464860;
+  color: #3e414d;
   text-decoration: none;
 }
 
@@ -89,12 +85,11 @@ a.hover {
   width: 0;
   height: 1px;
   display: block;
-  background: #464860;
   transition: 0.3s;
 }
 
 .blog_title,
 .blog_title:visited {
-  color: black;
+  color: #3e414d;
 }
 </style>

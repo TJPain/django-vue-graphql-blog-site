@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Posts in #{{ $route.params.tag }}</h2>
+    <h2 class="page-title">Posts in #{{ $route.params.tag }}</h2>
     <PostList :posts="posts" v-if="posts" />
   </div>
 </template>
@@ -51,3 +51,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.page-title {
+  color: #3e414d;
+}
+</style>
